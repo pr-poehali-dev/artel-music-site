@@ -6,44 +6,44 @@
 
 @layer base {
   :root {
-    --background: 0 0% 4%;
-    --foreground: 0 0% 95%;
+    --background: 0 0% 3%;
+    --foreground: 40 10% 92%;
 
-    --card: 0 0% 7%;
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 6%;
+    --card-foreground: 40 10% 92%;
 
-    --popover: 0 0% 7%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 40 10% 92%;
 
-    --primary: 0 72% 51%;
+    --primary: 4 80% 56%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 40 10% 92%;
 
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 55%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 30 5% 50%;
 
-    --accent: 24 80% 50%;
+    --accent: 28 90% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 14%;
-    --input: 0 0% 14%;
-    --ring: 0 72% 51%;
+    --border: 0 0% 12%;
+    --input: 0 0% 12%;
+    --ring: 4 80% 56%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 6%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 0 72% 51%;
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 40 10% 92%;
+    --sidebar-primary: 4 80% 56%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 12%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 0 0% 14%;
-    --sidebar-ring: 0 72% 51%;
+    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent-foreground: 40 10% 92%;
+    --sidebar-border: 0 0% 12%;
+    --sidebar-ring: 4 80% 56%;
   }
 }
 
@@ -59,14 +59,18 @@
   html {
     scroll-behavior: smooth;
   }
+
+  ::selection {
+    @apply bg-primary/30 text-foreground;
+  }
 }
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-amber-500;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-red-500 via-orange-400 to-amber-500;
   }
 
   .glow-red {
-    box-shadow: 0 0 40px rgba(239, 68, 68, 0.15);
+    box-shadow: 0 0 60px -15px rgba(220, 50, 50, 0.2);
   }
 }
